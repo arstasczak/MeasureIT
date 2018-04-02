@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BV1-FR-VrT">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13772"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--View Controller-->
+        <scene sceneID="tXr-a1-R10">
+            <objects>
+                <viewController id="BV1-FR-VrT" customClass="ViewController" customModule="MeasureIT" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="FOm-4y-Z6J">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                        <subviews>
+                            <arscnView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="TRT-22-Zia">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                            </arscnView>
+                            <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="ND0-AO-afE">
+                                <rect key="frame" x="163" y="616" width="51" height="31"/>
+                                <connections>
+                                    <action selector="switchEnabled:" destination="BV1-FR-VrT" eventType="valueChanged" id="JRe-k6-uvW"/>
+                                </connections>
+                            </switch>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="contactAdd" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="YoN-yF-7wP">
+                                <rect key="frame" x="176" y="322" width="22" height="22"/>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </button>
+                            <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="justified" translatesAutoresizingMaskIntoConstraints="NO" id="cX1-Sm-rtl">
+                                <rect key="frame" x="0.0" y="20" width="375" height="61"/>
+                                <color key="backgroundColor" red="0.90196079019999997" green="0.90196079019999997" blue="0.90196079019999997" alpha="0.54955051369863017" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="61" id="orn-rN-lNc"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                            </textView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="TRT-22-Zia" firstAttribute="top" secondItem="FOm-4y-Z6J" secondAttribute="top" id="0iE-OX-wV9"/>
+                            <constraint firstItem="TRT-22-Zia" firstAttribute="trailing" secondItem="hkz-oK-Udd" secondAttribute="trailing" id="3xr-2w-NHE"/>
+                            <constraint firstItem="TRT-22-Zia" firstAttribute="bottom" secondItem="hkz-oK-Udd" secondAttribute="bottom" id="DDd-1I-SN4"/>
+                            <constraint firstItem="hkz-oK-Udd" firstAttribute="trailing" secondItem="ND0-AO-afE" secondAttribute="trailing" constant="163" id="Fbv-xC-cAP"/>
+                            <constraint firstItem="cX1-Sm-rtl" firstAttribute="trailing" secondItem="hkz-oK-Udd" secondAttribute="trailing" id="KXk-Gi-jAF"/>
+                            <constraint firstItem="ND0-AO-afE" firstAttribute="top" secondItem="YoN-yF-7wP" secondAttribute="bottom" constant="272" id="Mtx-OM-NdZ"/>
+                            <constraint firstItem="YoN-yF-7wP" firstAttribute="centerY" secondItem="FOm-4y-Z6J" secondAttribute="centerY" id="cgf-bc-x9Z"/>
+                            <constraint firstItem="YoN-yF-7wP" firstAttribute="centerX" secondItem="FOm-4y-Z6J" secondAttribute="centerX" id="eNP-7m-66U"/>
+                            <constraint firstItem="cX1-Sm-rtl" firstAttribute="leading" secondItem="hkz-oK-Udd" secondAttribute="leading" id="ml7-bS-Cyy"/>
+                            <constraint firstItem="TRT-22-Zia" firstAttribute="leading" secondItem="hkz-oK-Udd" secondAttribute="leading" id="nKd-B8-FaA"/>
+                            <constraint firstItem="ND0-AO-afE" firstAttribute="leading" secondItem="hkz-oK-Udd" secondAttribute="leading" constant="163" id="qyQ-yE-qic"/>
+                            <constraint firstItem="cX1-Sm-rtl" firstAttribute="top" secondItem="FOm-4y-Z6J" secondAttribute="top" constant="20" id="wYb-CQ-2Oo"/>
+                            <constraint firstItem="hkz-oK-Udd" firstAttribute="bottom" secondItem="ND0-AO-afE" secondAttribute="bottom" constant="20" id="z4g-Og-6uE"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="hkz-oK-Udd"/>
+                    </view>
+                    <connections>
+                        <outlet property="distanceTextField" destination="cX1-Sm-rtl" id="IlX-l7-L6R"/>
+                        <outlet property="measureSwitch" destination="ND0-AO-afE" id="cN4-gh-xYE"/>
+                        <outlet property="sceneView" destination="TRT-22-Zia" id="rSz-Vq-aMR"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="SZV-WD-TEh" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="117.59999999999999" y="118.29085457271366"/>
+        </scene>
+    </scenes>
+</document>
